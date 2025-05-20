@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Environmental Monitoring Dashboard</h1>
+            <p>Track real-time weather conditions and forecasts</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+
+        <div class="dashboard-container" id="dashboard-container">
+            <div class="current-weather">
+                <div class="city-info">
+                    <h2 id="city-name">--</h2>
+                    <p id="date-time">--</p>
+                </div>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                        <h2 id="temperature">--°C</h2>
+                    </div>
+                    <div class="details">
+                        <p id="weather-description">--</p>
+                        <p>Feels like: <span id="feels-like">--°C</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-details-container">
+                <div class="weather-detail">
+                    <div class="icon">💧</div>
+                    <div class="label">Humidity</div>
+                    <div class="value" id="humidity">--%</div>
+                </div>
+                <div class="weather-detail">
+                    <div class="icon">💨</div>
+                    <div class="label">Wind Speed</div>
+                    <div class="value" id="wind-speed">-- km/h</div>
+                </div>
+                <div class="weather-detail">
+                    <div class="icon">🧭</div>
+                    <div class="label">Wind Direction</div>
+                    <div class="value" id="wind-direction">--</div>
+                </div>
+                <div class="weather-detail">
+                    <div class="icon">🌡️</div>
+                    <div class="label">Pressure</div>
+                    <div class="value" id="pressure">-- hPa</div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-cards" id="forecast-cards"></div>
+            </div>
+
+            <div class="air-quality-container">
+                <h2>Environmental Parameters</h2>
+                <div class="air-quality-indicator">
+                    <div class="aqi-label">Air Quality Index</div>
+                    <div class="aqi-value" id="aqi">--</div>
+                    <div class="aqi-status" id="aqi-status">--</div>
+                </div>
+                <div class="pollutants-container" id="pollutants-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Environmental Monitoring Dashboard</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
